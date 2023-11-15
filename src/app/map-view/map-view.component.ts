@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as L from 'leaflet';
 
@@ -9,8 +9,8 @@ import * as L from 'leaflet';
   templateUrl: './map-view.component.html',
   styleUrl: './map-view.component.css',
 })
-export class MapViewComponent {
-  private map: any;
+export class MapViewComponent implements AfterViewInit {
+  private map: L.Map | undefined;
 
   constructor() {}
 

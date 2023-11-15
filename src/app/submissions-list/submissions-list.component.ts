@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../data.service';
 
+interface Submission {
+  title: string;
+  from: string;
+  to: string;
+  dueDate: string;
+  status: string;
+}
+
 @Component({
   selector: 'app-submissions-list',
   standalone: true,
@@ -10,8 +18,8 @@ import { DataService } from '../data.service';
   styleUrls: ['./submissions-list.component.css'],
 })
 export class SubmissionsListComponent implements OnInit {
-  submissions: any[] = [];
-  filteredSubmissions: any[] = [];
+  submissions: Submission[] = [];
+  filteredSubmissions: Submission[] = [];
   selectedStatus: string = 'All';
 
   constructor(private dataService: DataService) {

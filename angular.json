@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "allowedCommonJsDependencies": ["leaflet"],
+            "allowedCommonJsDependencies": [
+              "leaflet"
+            ],
             "outputPath": "dist/submissions-task",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -92,11 +94,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "43e22c85-5f3d-4c52-a529-05745aff3c91"
+    "analytics": "43e22c85-5f3d-4c52-a529-05745aff3c91",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
