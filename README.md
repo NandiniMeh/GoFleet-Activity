@@ -22,9 +22,9 @@ To run the development server, follow these steps:
 
 2. Navigate to the project directory using the command line.
 
-3. Run npm install --legacy-peer-deps to install the project dependencies.
+3. Run `npm install` to install the project dependencies.
 
-4. Run ng serve to start the development server.
+4. Run `ng serve` to start the development server.
 
 5. Open your web browser and go to `http://localhost:4200/` to access the application.
 
