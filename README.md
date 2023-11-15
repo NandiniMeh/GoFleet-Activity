@@ -8,8 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Hi There! Here's my submission for the GoFleet developer activity. Please read on for some important information.
 
-Notes:
-- To trigger a production build, use the command ng build --configuration=production instead of ng build --prod (This is necessary for Angular CLI versions newer than 6, as the --prod flag is no longer used).
+###Notes:
+- To trigger a production build, use the command `ng build --configuration=production` instead of ng build --prod (This is necessary for Angular CLI versions newer than 6, as the --prod flag is no longer used).
 - The application provides the ability to filter submissions by their status. Simply select a status from the dropdown menu to apply the filter.
 - The list of submissions, which contains arbitrary information, is scrollable, allowing you to view a large number of submissions with ease.
 
