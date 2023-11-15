@@ -1,0 +1,16 @@
+<div class="submissions">
+    <div *ngFor="let submission of filteredSubmissions" class="submission-card">
+        <div class="submission-content">
+            <h2>{{ submission.title }}</h2>
+            <div class="submission-details">
+                <p><strong style="color: #B8B9BC">From:</strong> {{ submission.from }}</p>
+                <p><strong style="color: #B8B9BC">To:</strong> {{ submission.to }}</p>
+                <p style="color: red"><strong style="color: #B8B9BC">Due Date:</strong> {{ submission.dueDate }}</p>
+            </div>
+        </div>
+        <div class="status-container" [ngClass]="getClass(submission.status)">
+            <div class="status-indicator"></div>
+            <span class="status-text">{{ submission.status }}</span>
+        </div>
+    </div>
+</div>

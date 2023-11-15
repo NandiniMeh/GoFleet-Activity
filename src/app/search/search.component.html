@@ -1,0 +1,47 @@
+<div class="search-container">
+  <!-- Angular Material Search Bar -->
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Search..." />
+  </mat-form-field>
+
+  <!-- Angular Material Dropdown for Select Field -->
+  <mat-form-field appearance="outline" class="select-field">
+    <mat-select placeholder="Select Form">
+      <mat-option value="option1">Option 1</mat-option>
+      <mat-option value="option2">Option 2</mat-option>
+      <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Angular Material Dropdown for Select Status -->
+  <mat-form-field appearance="outline" class="select-field">
+    <mat-select placeholder="Select Status" [(ngModel)]="selectedStatus" (ngModelChange)="selectStatus(selectedStatus)">
+      <mat-option value="Complete">Complete</mat-option>
+      <mat-option value="Incomplete">Incomplete</mat-option>
+      <mat-option value="Needs Review">Needs Review</mat-option>
+      <mat-option value="All">All</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Angular Material Date Picker -->
+  <mat-form-field appearance="outline" class="date-picker">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+<!-- Group for the toggle and export button -->
+  <div class="right-group">
+    <!-- Segmented Control for Map/List -->
+    <div class="segmented-control">
+      <button mat-button class="segmented-button-left" [class.active]="isMapView" (click)="isMapView = true">Map</button>
+      <button mat-button class="segmented-button-right" [class.active]="!isMapView" (click)="isMapView = false">List</button>
+    </div>
+
+    <!-- Angular Material Export Button -->
+    <button mat-flat-button class="export-button">
+      <mat-icon>file_download</mat-icon> Export
+    </button>
+  </div>
+</div>

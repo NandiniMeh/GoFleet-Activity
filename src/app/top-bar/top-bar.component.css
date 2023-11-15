@@ -1,0 +1,55 @@
+.logo-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.nav-text {
+    vertical-align: middle;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #2188D9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    padding: 0;
+    margin-right: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-group {
+  display: flex;
+  gap: 15px;
+}

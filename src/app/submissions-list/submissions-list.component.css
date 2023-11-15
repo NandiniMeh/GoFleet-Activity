@@ -1,0 +1,113 @@
+.submissions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 5%;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.submission-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submission-content {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.submission-details {
+  margin-bottom: 12px;
+}
+
+/* Status container */
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius: 5px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* Status indicator */
+.status-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Status text */
+.status-text {
+  font-weight: normal;
+}
+
+/* Status colors and backgrounds */
+.status-container.status-incomplete .status-indicator {
+  background-color: #FF3D00;
+}
+
+.status-container.status-complete .status-indicator {
+  background-color: #53D86A;
+}
+
+.status-container.status-needs-review .status-indicator {
+  background-color: #B8B9BC;
+}
+
+.status-container.status-incomplete {
+  background-color: rgba(255, 61, 0, 0.1);
+  border: 1px solid #FF3D00;
+  color: #FF3D00;
+}
+
+.status-container.status-complete {
+  background-color: rgba(215, 229, 218, 1);
+  border: 1px solid #53D86A;
+  color: #53D86A;
+}
+
+.status-container.status-needs-review {
+  background-color: rgba(236, 236, 237, 1);
+  border: 1px solid #B8B9BC;
+  color: #B8B9BC;
+}
+
+h2 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+p {
+  color: #666;
+  margin: 4px 0;
+}
+
+strong {
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .submission-card {
+    flex-direction: column;
+  }
+  
+  .status-container {
+    position: static;
+    margin-top: 16px;
+    align-self: flex-start;
+  }
+}

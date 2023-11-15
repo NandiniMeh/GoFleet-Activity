@@ -1,0 +1,90 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 1vh 2%;
+}
+
+.search-field, .select-field, .date-picker {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-right: 2%;
+  min-width: 120px;
+}
+
+/* Group containing the toggle and export button */
+.right-group {
+  margin-bottom: 0.5%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.export-button {
+  margin-left: 1em;
+  color: #2188D9 !important;
+  background-color: transparent;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.export-button mat-icon {
+  color: #2188D9; /* Blue icon color */
+}
+
+
+.segmented-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 1em;
+}
+
+.segmented-button-left,
+.segmented-button-right {
+  border: none;
+  flex: 1;
+  min-width: 50px;
+  transition: background-color 0.3s;
+  padding: 0.5em 1em;
+}
+
+.segmented-button-left.active,
+.segmented-button-right.active {
+  background-color: #2188D9;
+  color: white;
+}
+
+.segmented-button-left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.segmented-button-right {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .search-container {
+    flex-wrap: wrap;
+  }
+
+  .search-field, .select-field, .date-picker, .right-group {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .export-button {
+    margin-left: 0;
+  }
+
+  .segmented-control {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+app-submissions-list {
+  flex: 1;
+  margin-right: 20px;
+}
+
+app-map-view {
+  flex: 2;
+}
+
+h1 {
+  margin-left: 2%;
+  margin-top: 2%;
+  font-weight: 700;
+}
